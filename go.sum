@@ -18,6 +18,8 @@ github.com/lucas11776-golang/http v0.0.0-20250617143637-e1dfc5e56e1f h1:logIs8J8
 github.com/lucas11776-golang/http v0.0.0-20250617143637-e1dfc5e56e1f/go.mod h1:0bdo5iquWyrcok5hWgIYCW87f7x3qQ+A4FdVDmrB/fs=
 github.com/lucas11776-golang/orm v0.0.0-20250612111321-4e48b5f692c2 h1:j9Ku4r0D3sZ3PDfR9/VxCXW9gpQCA2HDXf7GFHOgAew=
 github.com/lucas11776-golang/orm v0.0.0-20250612111321-4e48b5f692c2/go.mod h1:2kAretdznjHPSDcdktfjuzukHtjFEuYjksDZIFsA0Ks=
+github.com/mattn/go-sqlite3 v1.14.24 h1:tpSp2G2KyMnnQu99ngJ47EIkWVmliIizyZBfPrBWDRM=
+github.com/mattn/go-sqlite3 v1.14.24/go.mod h1:Uh1q+B4BYcTPb+yiD3kU8Ct7aC0hY9fxUwlHK0RXw+Y=
 github.com/onsi/ginkgo/v2 v2.9.5 h1:+6Hr4uxzP4XIUyAkg61dWBw8lb/gc4/X5luuxN/EC+Q=
 github.com/onsi/ginkgo/v2 v2.9.5/go.mod h1:tvAoo1QUJwNEU2ITftXTpR7R1RbCzoZUOs3RonqW57k=
 github.com/open2b/scriggo v0.60.0 h1:jCODGoYDKB2dQfIiWRqSTkutptfrMCOzaotXI8e8ix0=

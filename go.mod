@@ -10,6 +10,7 @@ require (
 	github.com/joho/godotenv v1.5.1 // indirect
 	github.com/lucas11776-golang/http v0.0.0-20250617143637-e1dfc5e56e1f // indirect
 	github.com/lucas11776-golang/orm v0.0.0-20250612111321-4e48b5f692c2 // indirect
+	github.com/mattn/go-sqlite3 v1.14.24 // indirect
 	github.com/onsi/ginkgo/v2 v2.9.5 // indirect
 	github.com/open2b/scriggo v0.60.0 // indirect
 	github.com/quic-go/qpack v0.5.1 // indirect
