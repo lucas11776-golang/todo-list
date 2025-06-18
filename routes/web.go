@@ -6,6 +6,7 @@ import (
 	"server/app/controllers/web/logout"
 	"server/app/controllers/web/register"
 	"server/app/controllers/web/todos"
+	"server/app/middlewares/web/authentication"
 
 	"github.com/lucas11776-golang/http"
 )
@@ -16,11 +17,11 @@ func web(route *http.Router) {
 	route.Group("register", func(route *http.Router) {
 		route.Get("/", register.Index)
 		route.Post("/", register.Store)
-	})
+	}, authentication.IsGuest)
 	route.Group("login", func(route *http.Router) {
 		route.Get("/", login.Index)
 		route.Post("/", login.Store)
-	})
+	}, authentication.IsGuest)
 	route.Group("todos", func(route *http.Router) {
 		route.Get("/", todos.Index)
 		route.Get("create", todos.Create)

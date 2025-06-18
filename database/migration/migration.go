@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"server/models"
 
 	"github.com/lucas11776-golang/http/utils/env"
 	"github.com/lucas11776-golang/orm"
@@ -20,6 +21,9 @@ func main() {
 
 // Comment
 func Models() orm.Models {
-	return orm.Models{}
+	return orm.Models{
+		models.User{},
+		models.Todo{},
+	}
 
 }
