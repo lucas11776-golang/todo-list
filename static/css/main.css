@@ -12,7 +12,7 @@ body {
 body::after {
   content: "";
   display: block;
-  height: 50px; /* Set same as footer's height */
+  height: 50px;
 }
 
 /* --- Navigation Bar --- */
@@ -158,7 +158,6 @@ body::after {
 }
 
 /* --- Authentication --- */
-/* Custom styles for the modern look */
 .authentication-container {
   font-family: "Poppins", sans-serif;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -243,7 +242,6 @@ body::after {
 .app-container {
   max-width: 800px;
   margin: 100px auto 30px;
-  /* Add margin for fixed navbar */
   background-color: #fff;
   padding: 2rem;
   border-radius: 15px;
@@ -301,7 +299,6 @@ body::after {
   justify-content: space-between;
   transition: background-color 0.3s ease;
   word-wrap: break-word;
-  /* Ensure long text wraps */
 }
 
 .todo-item.completed .todo-content {
@@ -339,11 +336,64 @@ body::after {
   border-radius: 8px;
 }
 
+/* --- Not Found --- */
+.out-not-found-container {
+  background-color: #f0f2f5;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.not-found-container {
+  max-width: 500px;
+}
+
+.not-found-container .error-code {
+  font-size: 8rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+}
+
+.not-found-container h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  color: #343a40;
+}
+
+.not-found-container p {
+  color: #6c757d;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.not-found-container .btn-home {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 50px;
+  padding: 0.8rem 2.5rem;
+  font-weight: 500;
+  color: #fff;
+  margin-top: 2rem;
+  transition: all 0.3s ease;
+}
+
+.not-found-container .btn-home:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
 /* --- Footer --- */
 .footer {
   background-color: #333;
   color: #ccc;
-  padding: 2rem 0;
+  padding: 2rem 0 3.5rem;
   text-align: center;
   position: absolute;
   bottom: 0;

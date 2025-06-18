@@ -1,89 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 Not Found - TodoApp</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Custom styles for the 404 page */
-        body, html {
-            height: 100%;
-            margin: 0;
-        }
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f0f2f5;
-            color: #333;
-            display: flex;
-            align-items: center; /* Vertically center */
-            justify-content: center; /* Horizontally center */
-            text-align: center;
-        }
+{% extends "/components/layouts/standard.html" %}
 
-        .not-found-container {
-            max-width: 500px;
-        }
-        
-        .not-found-container .error-code {
-            font-size: 8rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            line-height: 1;
-        }
-        
-        .not-found-container h1 {
-            font-size: 2.5rem;
-            font-weight: 600;
-            margin-top: 1rem;
-            color: #343a40;
-        }
-        
-        .not-found-container p {
-            color: #6c757d;
-            font-size: 1.1rem;
-            margin-top: 1rem;
-        }
-        
-        .not-found-container .btn-home {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border: none;
-            border-radius: 50px;
-            padding: 0.8rem 2.5rem;
-            font-weight: 500;
-            color: #fff;
-            margin-top: 2rem;
-            transition: all 0.3s ease;
-        }
-        
-        .not-found-container .btn-home:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-        
-    </style>
-</head>
-<body>
-    
+{% macro Title %}404 Not Found{% end %}
+
+{% macro Navbar %}{% end %}
+
+{% macro Content %}
     <!-- 404 Content -->
-    <div class="not-found-container">
-        <div class="error-code">404</div>
-        <h1>Oops! Page Not Found</h1>
-        <p>The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
-        <a href="#" class="btn btn-home">
-            <i class="fas fa-home me-2"></i> Go to Homepage
-        </a>
+    <div class="out-not-found-container">
+        <div class="not-found-container">
+            <div class="error-code">404</div>
+            <h1>Oops! Page Not Found</h1>
+            <p>The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+            <a href="{{ url("/") }}" class="btn btn-home">
+                <i class="fas fa-home me-2"></i> Go to Homepage
+            </a>
+        </div>
     </div>
+{% end %}
 
-    <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+{% macro Footer %}{% end %}
