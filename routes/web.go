@@ -6,6 +6,7 @@ import (
 	"server/app/controllers/web/logout"
 	"server/app/controllers/web/register"
 	"server/app/controllers/web/todos"
+	"server/app/controllers/web/todos/complete"
 	"server/app/middlewares/web/authentication"
 	"server/app/middlewares/web/tasks"
 	"server/app/requests"
@@ -32,6 +33,10 @@ func web(route *http.Router) {
 			route.Get("/", todos.View)
 			route.Get("/edit", todos.Edit)
 			route.Delete("/", todos.Delete)
+			route.Group("complete", func(route *http.Router) {
+				route.Post("/", complete.Store)
+				route.Delete("/", complete.Destroy)
+			})
 		}, tasks.UserTask)
 	})
 	route.Delete("logout", logout.Destroy)

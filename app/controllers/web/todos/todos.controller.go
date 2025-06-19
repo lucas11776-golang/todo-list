@@ -26,7 +26,7 @@ func Store(req *http.Request, res *http.Response) *http.Response {
 	)
 
 	if err != nil {
-		return res.Back().WithError("create_task_error", err.Error())
+		// TODO: log error
 	}
 
 	return res.Redirect(fmt.Sprintf("todos/%d", task.ID))
@@ -34,7 +34,15 @@ func Store(req *http.Request, res *http.Response) *http.Response {
 
 // View Todo Page
 func View(req *http.Request, res *http.Response) *http.Response {
-	return res.View("todos.view", http.ViewData{})
+	task, err := tasks.GetTasks(cast.ToInt64(req.Parameters.Get("task")))
+
+	if err != nil {
+		// TODO: log error
+	}
+
+	return res.View("todos.view", http.ViewData{
+		"task": task,
+	})
 }
 
 // Edit Todo Page

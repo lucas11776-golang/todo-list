@@ -10,5 +10,5 @@ type Task struct {
 	DueDate     time.Time `json:"due_date" column:"due_date" type:"datetime"`
 	Title       string    `json:"title" column:"title" type:"string"`
 	Description string    `json:"description" column:"description" type:"text"`
-	Complete    string    `json:"complete" column:"complete" type:"boolean"`
+	Complete    bool      `json:"complete" column:"complete" type:"boolean"`
 }

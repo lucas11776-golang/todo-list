@@ -7,18 +7,24 @@
 {% end %}
 
 {% macro Content %}
+
+    {% if task %}
     <!-- Main App Container -->
     <div class="app-container">
-        
+
         <!-- Task Header -->
         <div class="task-header d-flex justify-content-end align-items-center pb-3 border-bottom">
+            {% if task.Complete %}
+            <span class="badge bg-success text-white">Complete</span>
+            {% else %}
             <span class="badge bg-warning text-dark">In Progress</span>
+            {% end %}
         </div>
-        
+
         <!-- Task Body -->
         <div class="task-body">
-            <p class="lead">Create mockups in Figma for the new homepage and inner pages.</p>
-            <p>Make sure to follow the new brand guidelines. The design must be fully responsive, accessible, and user-friendly. Key sections to include are the hero, features, testimonials, pricing, and a clear call-to-action.</p>
+            <p class="lead">{{ task.Title }}</p>
+            <p>{{ task.Description }}</p>
         </div>
         
         <!-- Task Metadata -->
@@ -39,16 +45,30 @@
             </div>
 
             <div class="col-6 text-end">
-                <a class="btn btn-outline-primary me-2 mt-2">
+                <a class="btn btn-outline-primary me-2 mt-2" href="{{ url("todos", task.ID, "edit") }}">
                     <i class="fas fa-pencil-alt me-1"></i> Edit
                 </a>
-                <button class="btn btn-success me-2 mt-2">
-                    <i class="fas fa-check me-1"></i> Mark as Complete
-                </button>
+
+                {% if task.Complete %}
+                <form method="post" action="{{ url("todos", task.ID, "complete") }}">
+                    <input name="__METHOD__" value="DELETE" hidden>
+                    <button class="btn btn-warning me-2 mt-2">
+                        <i class="fas fa-check me-1"></i> Mark as Uncompleted
+                    </button>
+                </form>
+                {% else %}
+                <form method="post" action="{{ url("todos", task.ID, "complete") }}">
+                    <button class="btn btn-success me-2 mt-2">
+                        <i class="fas fa-check me-1"></i> Mark as Completed
+                    </button>
+                </form>
+                {% end %}
+
             </div>
         </div>
-        
+
     </div>
+    {% end %}
 {% end %}
 
 {% macro Footer %}
