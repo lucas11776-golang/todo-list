@@ -12,7 +12,13 @@ body {
 body::after {
   content: "";
   display: block;
-  height: 50px;
+  /* height: 50px; */
+}
+
+.input-group.is-invalid .form-control,
+.input-group.is-invalid .input-group-text,
+.input-group.is-invalid .input-group-icon {
+  border-color: var(--bs-danger) !important;
 }
 
 /* --- Navigation Bar --- */
@@ -179,6 +185,7 @@ body::after {
 .login-container {
   max-width: 450px;
   width: 100%;
+  padding: 40px 0px;
 }
 
 .login-card {

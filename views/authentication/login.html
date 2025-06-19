@@ -16,7 +16,7 @@
                     <!-- Email Input -->
                     <div class="mb-3">
                         <label for="email" class="form-label">Email address</label>
-                        <div class="input-group  {% if has(`password`) %}is-invalid{% end %}">
+                        <div class="input-group {% if has(`password`) %}is-invalid{% end %}">
                             <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                             <input name="email"
                                    type="email"

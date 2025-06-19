@@ -18,7 +18,7 @@ func RegisterFormRequest() http.Middleware {
 	return http.FormRequest(validation.RulesBag{
 		"first_name": validation.Rules{"required"},
 		"last_name":  validation.Rules{"required"},
-		"email":      validation.Rules{"required"},
+		"email":      validation.Rules{"required", "email", "exists:users,sqlite"},
 		"password":   validation.Rules{"required", "min:8", "max:21", "confirmed"},
 	})
 }
