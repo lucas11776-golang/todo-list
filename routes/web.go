@@ -26,6 +26,7 @@ func web(route *http.Router) {
 	route.Group("todos", func(route *http.Router) {
 		route.Get("/", todos.Index)
 		route.Get("create", todos.Create)
+		route.Post("/", todos.Store, requests.CreateTask())
 		route.Group("{todo}", func(route *http.Router) {
 			route.Get("/", todos.View)
 			route.Get("/edit", todos.Edit)

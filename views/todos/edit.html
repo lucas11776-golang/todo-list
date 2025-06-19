@@ -19,10 +19,14 @@
                 <input type="text" class="form-control" id="todo-title" placeholder="e.g., Buy groceries" required>
             </div>
             <div class="mb-3">
+                <label for="due_date" class="form-label">Due Date</label>
+                <input type="datetime-local" class="form-control" id="due_date">
+            </div>
+            <div class="mb-3">
                 <label for="todo-description" class="form-label">Description</label>
                 <textarea class="form-control" id="todo-description" rows="3" placeholder="e.g., Milk, bread, eggs..."></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Add Task</button>
+            <button type="submit" class="btn btn-primary">Update Task</button>
         </form>
         
         <!-- To-Do List -->

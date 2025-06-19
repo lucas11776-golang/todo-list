@@ -9,25 +9,35 @@
 {% macro Content %}
     <!-- Main App Container -->
     <div class="app-container">
-        <h1>My Tasks</h1>
+        <div class="row">
+            <div class="col-6 text-left">
+                <h1 style="text-align: left;">My Tasks</h1>
+            </div>
+            <div class="col-6" style="text-align: right;">
+                <a class="btn btn-primary" href="{{ url("todos", "create") }}">
+                    <i class="fa fa-floppy-disk"></i> Create
+                </a>
+            </div>
 
-        <ul id="todo-list">
-            <!-- To-do items will be dynamically inserted here by JavaScript -->
-            <li class="todo-item completed">
-                <div class="todo-content">
-                    <h5>Design the new website</h5>
-                    <p>Create mockups in Figma for the new homepage.</p>
-                </div>
-                <div class="todo-actions">
-                    <button class="btn btn-success">
-                        <i class="fas fa-check"></i>
-                    </button>
-                    <button class="btn btn-danger">
-                        <i class="fas fa-trash"></i>
-                    </button>
-                </div>
-            </li>
-        </ul>
+            <div class="col-12">
+                <ul id="todo-list">
+                    <li class="todo-item completed">
+                        <div class="todo-content">
+                            <h5>Design the new website</h5>
+                            <p>Create mockups in Figma for the new homepage.</p>
+                        </div>
+                        <div class="todo-actions">
+                            <button class="btn btn-success">
+                                <i class="fas fa-check"></i>
+                            </button>
+                            <button class="btn btn-danger">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 {% end %}
 

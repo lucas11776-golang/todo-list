@@ -2,8 +2,8 @@ package models
 
 import "time"
 
-type Todo struct {
-	Connection  string    `json:"-" connection:"sqlite" table:"todos"`
+type Task struct {
+	Connection  string    `json:"-" connection:"sqlite" table:"tasks"`
 	ID          int64     `json:"id" column:"id" type:"primary_key"`
 	UserID      int64     `json:"-" column:"user_id" type:"integer"`
 	CreatedAt   time.Time `json:"created_at" column:"created_at" type:"datetime_current"`

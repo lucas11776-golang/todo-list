@@ -23,7 +23,7 @@ func main() {
 func Models() orm.Models {
 	return orm.Models{
 		models.User{},
-		models.Todo{},
+		models.Task{},
 	}
 
 }

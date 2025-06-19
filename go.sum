@@ -24,6 +24,8 @@ github.com/lucas11776-golang/http v0.0.0-20250618144832-938c732f012f h1:9NNoFAvY
 github.com/lucas11776-golang/http v0.0.0-20250618144832-938c732f012f/go.mod h1:0bdo5iquWyrcok5hWgIYCW87f7x3qQ+A4FdVDmrB/fs=
 github.com/lucas11776-golang/http v0.0.0-20250619084913-dc2091278681 h1:IccfB6HuG7NQ7MnM9Ec85Wq+Sc1kdiioH4o5FlZ/0qA=
 github.com/lucas11776-golang/http v0.0.0-20250619084913-dc2091278681/go.mod h1:5jQDgJ854gcEDdmdDscBgC95ObFv69c85UqWdHwua2k=
+github.com/lucas11776-golang/http v0.0.0-20250619105343-b6ca5adfe518 h1:AO6HLExrMBp7aDsXpYxEMNp3hvxIu1QybDLWMq6Bb2M=
+github.com/lucas11776-golang/http v0.0.0-20250619105343-b6ca5adfe518/go.mod h1:5jQDgJ854gcEDdmdDscBgC95ObFv69c85UqWdHwua2k=
 github.com/lucas11776-golang/orm v0.0.0-20250612111321-4e48b5f692c2 h1:j9Ku4r0D3sZ3PDfR9/VxCXW9gpQCA2HDXf7GFHOgAew=
 github.com/lucas11776-golang/orm v0.0.0-20250612111321-4e48b5f692c2/go.mod h1:2kAretdznjHPSDcdktfjuzukHtjFEuYjksDZIFsA0Ks=
 github.com/lucas11776-golang/orm v0.0.0-20250618095051-98c805f6d19b h1:HOWOshBxQk5663Jn9UUSTYo+TC1OSatrENqmatmejk0=

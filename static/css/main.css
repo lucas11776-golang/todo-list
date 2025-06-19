@@ -15,6 +15,7 @@ body::after {
   /* height: 50px; */
 }
 
+.form-control.is-invalid,
 .input-group.is-invalid .form-control,
 .input-group.is-invalid .input-group-text,
 .input-group.is-invalid .input-group-icon {
