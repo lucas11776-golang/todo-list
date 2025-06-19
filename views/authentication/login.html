@@ -13,16 +13,26 @@
                     <p>Sign in to continue to your account</p>
                 </div>
                 <form method="post" action="{{ url("login") }}">
+
+                    <!-- Login Error Alert -->
+                    {% if has("login_error")  %}
+                    <div class="mb-3">
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong>{{ error("login_error") }}</strong>.
+                        </div>
+                    </div>
+                    {% end  %}
+
                     <!-- Email Input -->
                     <div class="mb-3">
                         <label for="email" class="form-label">Email address</label>
-                        <div class="input-group {% if has(`password`) %}is-invalid{% end %}">
+                        <div class="input-group {% if has(`email`) %}is-invalid{% end %}">
                             <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                             <input name="email"
                                    type="email"
                                    class="form-control"
                                    id="email"
-                                   placeholder="you@example.com"
+                                   placeholder="john@deo.com"
                                    value="{{ old("email") }}">
                         </div>
                         <div class="invalid-feedback">{{ error("email") }}</div>
@@ -37,7 +47,7 @@
                                    type="password"
                                    class="form-control"
                                    id="password"
-                                   placeholder="••••••••">
+                                   placeholder="********">
                         </div>
                         <div class="invalid-feedback">{{ error("password") }}</div>
                     </div>
