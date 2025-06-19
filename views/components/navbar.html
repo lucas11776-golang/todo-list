@@ -26,7 +26,10 @@
                 </li>
                 {% else %}
                 <li class="nav-item mr-4 ms-2">
-                    <a class="btn btn-outline-primary" href="{{ url("logout") }}">Logout</a>
+                    <form method="post" action="{{ url("logout") }}">
+                        <input name="__METHOD__" value="DELETE" hidden>
+                        <button class="btn btn-outline-primary" type="submit">Logout</button>
+                    </form>
                 </li>
                 {% end %}
             </ul>
