@@ -15,3 +15,31 @@ func CreateTask(userID int64, form map[string]string) (*models.Task, error) {
 			"description": form["description"],
 		})
 }
+
+// Create user task
+func AllTasks(userID int64) ([]*models.Task, error) {
+	return orm.Model(models.Task{}).
+		Where("user_id", "=", userID).
+		Get()
+}
+
+// Create user task
+func GetTasks(userID int64) (*models.Task, error) {
+	return orm.Model(models.Task{}).
+		Where("user_id", "=", userID).
+		First()
+}
+
+// Mark task as complete
+func TaskCompleted(taskID int64) error {
+	return orm.Model(models.Task{}).
+		Where("task_id", "=", taskID).
+		Update(orm.Values{"complete": true})
+}
+
+// Mark task as not complete
+func TaskUncompleted(taskID int64) error {
+	return orm.Model(models.Task{}).
+		Where("task_id", "=", taskID).
+		Update(orm.Values{"complete": true})
+}

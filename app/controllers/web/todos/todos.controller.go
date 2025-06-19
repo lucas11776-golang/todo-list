@@ -21,7 +21,7 @@ func Create(req *http.Request, res *http.Response) *http.Response {
 // Store Todo Item
 func Store(req *http.Request, res *http.Response) *http.Response {
 	task, err := tasks.CreateTask(
-		cast.ToInt64(req.Session.Get("user-id")),
+		cast.ToInt64(req.Session.Get("user_id")),
 		req.Validator.Values(),
 	)
 

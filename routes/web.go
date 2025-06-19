@@ -7,6 +7,7 @@ import (
 	"server/app/controllers/web/register"
 	"server/app/controllers/web/todos"
 	"server/app/middlewares/web/authentication"
+	"server/app/middlewares/web/tasks"
 	"server/app/requests"
 
 	"github.com/lucas11776-golang/http"
@@ -27,11 +28,11 @@ func web(route *http.Router) {
 		route.Get("/", todos.Index)
 		route.Get("create", todos.Create)
 		route.Post("/", todos.Store, requests.CreateTask())
-		route.Group("{todo}", func(route *http.Router) {
+		route.Group("{task}", func(route *http.Router) {
 			route.Get("/", todos.View)
 			route.Get("/edit", todos.Edit)
 			route.Delete("/", todos.Delete)
-		})
+		}, tasks.UserTask)
 	})
 	route.Delete("logout", logout.Destroy)
 }
