@@ -32,6 +32,7 @@ func web(route *http.Router) {
 		route.Group("{task}", func(route *http.Router) {
 			route.Get("/", todos.View)
 			route.Get("/edit", todos.Edit)
+			route.Patch("/", todos.Update, requests.UpdateTask())
 			route.Delete("/", todos.Delete)
 			route.Group("complete", func(route *http.Router) {
 				route.Post("/", complete.Store)

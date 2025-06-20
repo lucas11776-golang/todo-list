@@ -10,7 +10,12 @@ import (
 
 // Todo List View
 func Index(req *http.Request, res *http.Response) *http.Response {
-	return res.View("todos.index", http.ViewData{})
+	tasks, err := tasks.Tasks(cast.ToInt64(req.Session.Get("user_id")))
+
+	return res.View("todos.index", http.ViewData{
+		"tasks_error": &err,
+		"tasks":       &tasks,
+	})
 }
 
 // Create Todo Page
@@ -26,7 +31,7 @@ func Store(req *http.Request, res *http.Response) *http.Response {
 	)
 
 	if err != nil {
-		// TODO: log error
+		return res.Back().WithError("task_create_error", err.Error())
 	}
 
 	return res.Redirect(fmt.Sprintf("todos/%d", task.ID))
@@ -34,25 +39,36 @@ func Store(req *http.Request, res *http.Response) *http.Response {
 
 // View Todo Page
 func View(req *http.Request, res *http.Response) *http.Response {
-	task, err := tasks.GetTasks(cast.ToInt64(req.Parameters.Get("task")))
-
-	if err != nil {
-		// TODO: log error
-	}
+	task, err := tasks.Task(cast.ToInt64(req.Parameters.Get("task")))
 
 	return res.View("todos.view", http.ViewData{
-		"task": task,
+		"task_error": &err,
+		"task":       task,
 	})
 }
 
 // Edit Todo Page
 func Edit(req *http.Request, res *http.Response) *http.Response {
-	return res.View("todos.edit", http.ViewData{})
+	task, err := tasks.Task(cast.ToInt64(req.Parameters.Get("task")))
+
+	return res.View("todos.edit", http.ViewData{
+		"task_error": &err,
+		"task":       task,
+	})
 }
 
 // Update Todo
 func Update(req *http.Request, res *http.Response) *http.Response {
-	return res
+	err := tasks.UpdateTask(
+		cast.ToInt64(req.Parameters.Get("task")),
+		req.Validator.Values(),
+	)
+
+	if err != nil {
+		return res.Back().WithError("task_error", err.Error())
+	}
+
+	return res.Back()
 }
 
 // Delete Todo

@@ -17,16 +17,16 @@ func CreateTask(userID int64, form map[string]string) (*models.Task, error) {
 }
 
 // Create user task
-func AllTasks(userID int64) ([]*models.Task, error) {
+func Tasks(userID int64) ([]*models.Task, error) {
 	return orm.Model(models.Task{}).
 		Where("user_id", "=", userID).
 		Get()
 }
 
 // Create user task
-func GetTasks(userID int64) (*models.Task, error) {
+func Task(taskID int64) (*models.Task, error) {
 	return orm.Model(models.Task{}).
-		Where("user_id", "=", userID).
+		Where("id", "=", taskID).
 		First()
 }
 
@@ -52,4 +52,12 @@ func UpdateTask(taskID int64, form map[string]string) error {
 			"title":       form["title"],
 			"description": form["description"],
 		})
+}
+
+// Update Task
+func DeleteTask(taskID int64) error {
+	// TODO: Forgot delete function in ORM :()
+	// return orm.Model(models.Task{}).
+	// 	Where("id", "=", taskID)
+	return nil
 }

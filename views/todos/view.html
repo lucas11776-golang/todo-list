@@ -8,10 +8,19 @@
 
 {% macro Content %}
 
-    {% if task %}
     <!-- Main App Container -->
     <div class="app-container">
 
+        <!-- Login Error Alert -->
+        {% if task_error  %}
+        <div class="mb-3">
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>{{ task_error.Error() }}</strong>.
+            </div>
+        </div>
+        {% end  %}
+
+        {% if task %}
         <!-- Task Header -->
         <div class="task-header d-flex justify-content-end align-items-center pb-3 border-bottom">
             {% if task.Complete %}
@@ -28,9 +37,11 @@
         </div>
         
         <!-- Task Metadata -->
-        <div class="task-meta bg-light p-3 rounded">
-            <p><strong><i class="fas fa-calendar-plus me-2"></i>Created:</strong> June 10, 2024</p>
-            <p class="mb-0"><strong><i class="fas fa-calendar-times me-2"></i>Due Date:</strong> June 25, 2024</p>
+        <div class="task-meta bg-light rounded p-2">
+            <p class="mt-2">
+                <strong><i class="fas fa-calendar-plus me-2"></i>Created:</strong> {{ format(task.CreatedAt, "02 Jan 06 15:04 MST") }}
+            </p>
+            <!-- <p class="mb-0"><strong><i class="fas fa-calendar-times me-2"></i>Due Date:</strong> June 25, 2024</p> -->
         </div>
         
         <!-- Task Actions -->
@@ -39,36 +50,37 @@
                 <a class="btn btn-outline-secondary me-2 mt-2" href="{{ url("todos") }}">
                     <i class="fas fa-arrow-left me-1"></i> Back to List
                 </a>
-                <a class="btn btn-outline-secondary me-2 mt-2" href="{{ url("todos") }}">
-                    <i class="fas fa-trash me-1"></i> Delete
-                </a>
+                <form class="d-inline" method="post" action="{{ url("todos", task.ID) }}">
+                    <input name="__METHOD__" value="DELETE" hidden>
+                    <button class="btn btn-danger me-2 mt-2">
+                        <i class="fas fa-trash me-1"></i> Delete
+                    </button>
+                </form>
             </div>
-
             <div class="col-6 text-end">
                 <a class="btn btn-outline-primary me-2 mt-2" href="{{ url("todos", task.ID, "edit") }}">
                     <i class="fas fa-pencil-alt me-1"></i> Edit
                 </a>
-
                 {% if task.Complete %}
-                <form method="post" action="{{ url("todos", task.ID, "complete") }}">
+                <form class="d-inline" method="post" action="{{ url("todos", task.ID, "complete") }}">
                     <input name="__METHOD__" value="DELETE" hidden>
                     <button class="btn btn-warning me-2 mt-2">
-                        <i class="fas fa-check me-1"></i> Mark as Uncompleted
+                        <i class="fas fa-check me-1"></i> Uncompleted
                     </button>
                 </form>
                 {% else %}
-                <form method="post" action="{{ url("todos", task.ID, "complete") }}">
+                <form class="d-inline" method="post" action="{{ url("todos", task.ID, "complete") }}">
                     <button class="btn btn-success me-2 mt-2">
-                        <i class="fas fa-check me-1"></i> Mark as Completed
+                        <i class="fas fa-check me-1"></i> Completed
                     </button>
                 </form>
                 {% end %}
 
             </div>
         </div>
+        {% end %}
 
     </div>
-    {% end %}
 {% end %}
 
 {% macro Footer %}
