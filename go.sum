@@ -28,10 +28,14 @@ github.com/lucas11776-golang/http v0.0.0-20250619105343-b6ca5adfe518 h1:AO6HLExr
 github.com/lucas11776-golang/http v0.0.0-20250619105343-b6ca5adfe518/go.mod h1:5jQDgJ854gcEDdmdDscBgC95ObFv69c85UqWdHwua2k=
 github.com/lucas11776-golang/http v0.0.0-20250619123901-4a674b4d8c5b h1:M/MhgwDyYMqnk9TGr+UU0n6S3ykYLt24AzuRP2sQiX4=
 github.com/lucas11776-golang/http v0.0.0-20250619123901-4a674b4d8c5b/go.mod h1:5jQDgJ854gcEDdmdDscBgC95ObFv69c85UqWdHwua2k=
+github.com/lucas11776-golang/http v0.0.0-20250620174322-5049f5ac7e1d h1:GlGfk1Mk7Bmm3OwAzcDC2ula5kxcjvC9RtvluJVQpIY=
+github.com/lucas11776-golang/http v0.0.0-20250620174322-5049f5ac7e1d/go.mod h1:Q4mqff50dHumlDiapUVXrPz/0jHSEP5vZ+JTObXkoWk=
 github.com/lucas11776-golang/orm v0.0.0-20250612111321-4e48b5f692c2 h1:j9Ku4r0D3sZ3PDfR9/VxCXW9gpQCA2HDXf7GFHOgAew=
 github.com/lucas11776-golang/orm v0.0.0-20250612111321-4e48b5f692c2/go.mod h1:2kAretdznjHPSDcdktfjuzukHtjFEuYjksDZIFsA0Ks=
 github.com/lucas11776-golang/orm v0.0.0-20250618095051-98c805f6d19b h1:HOWOshBxQk5663Jn9UUSTYo+TC1OSatrENqmatmejk0=
 github.com/lucas11776-golang/orm v0.0.0-20250618095051-98c805f6d19b/go.mod h1:2kAretdznjHPSDcdktfjuzukHtjFEuYjksDZIFsA0Ks=
+github.com/lucas11776-golang/orm v0.0.0-20250620173136-60982e012ecf h1:ZOzZ/71V7UJOawc+T0HTuxWyalmlXc+sxSlJfTho0l8=
+github.com/lucas11776-golang/orm v0.0.0-20250620173136-60982e012ecf/go.mod h1:2kAretdznjHPSDcdktfjuzukHtjFEuYjksDZIFsA0Ks=
 github.com/mattn/go-sqlite3 v1.14.24 h1:tpSp2G2KyMnnQu99ngJ47EIkWVmliIizyZBfPrBWDRM=
 github.com/mattn/go-sqlite3 v1.14.24/go.mod h1:Uh1q+B4BYcTPb+yiD3kU8Ct7aC0hY9fxUwlHK0RXw+Y=
 github.com/mattn/go-sqlite3 v1.14.28 h1:ThEiQrnbtumT+QMknw63Befp/ce/nUPgBPMlRFEum7A=

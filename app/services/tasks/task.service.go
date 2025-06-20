@@ -56,8 +56,7 @@ func UpdateTask(taskID int64, form map[string]string) error {
 
 // Update Task
 func DeleteTask(taskID int64) error {
-	// TODO: Forgot delete function in ORM :()
-	// return orm.Model(models.Task{}).
-	// 	Where("id", "=", taskID)
-	return nil
+	return orm.Model(models.Task{}).
+		Where("id", "=", taskID).
+		Delete()
 }

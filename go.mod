@@ -3,8 +3,8 @@ module server
 go 1.24.2
 
 require (
-	github.com/lucas11776-golang/http v0.0.0-20250619123901-4a674b4d8c5b
-	github.com/lucas11776-golang/orm v0.0.0-20250618095051-98c805f6d19b
+	github.com/lucas11776-golang/http v0.0.0-20250620174322-5049f5ac7e1d
+	github.com/lucas11776-golang/orm v0.0.0-20250620173136-60982e012ecf
 	github.com/spf13/cast v1.9.2
 	golang.org/x/crypto v0.39.0
 )

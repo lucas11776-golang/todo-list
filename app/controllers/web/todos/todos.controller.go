@@ -73,5 +73,11 @@ func Update(req *http.Request, res *http.Response) *http.Response {
 
 // Delete Todo
 func Delete(req *http.Request, res *http.Response) *http.Response {
-	return res
+	err := tasks.DeleteTask(cast.ToInt64(req.Parameters.Get("task")))
+
+	if err != nil {
+		return res.Back().WithError("task_error", err.Error())
+	}
+
+	return res.Redirect("todos")
 }
