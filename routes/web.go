@@ -39,6 +39,6 @@ func web(route *http.Router) {
 				route.Delete("/", complete.Destroy)
 			})
 		}, tasks.UserTask)
-	})
+	}, authentication.IsAuth)
 	route.Delete("logout", logout.Destroy)
 }
