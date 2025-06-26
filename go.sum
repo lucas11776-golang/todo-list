@@ -1,3 +1,5 @@
+github.com/antlr4-go/antlr/v4 v4.13.1 h1:SqQKkuVZ+zWkMMNkjy5FZe5mr5WURWnlpmOuzYWrPrQ=
+github.com/antlr4-go/antlr/v4 v4.13.1/go.mod h1:GKmUxMtwp6ZgGwZSva4eWPC5mS6vUAmOABFgjdkM7Nw=
 github.com/chzyer/logex v1.1.10/go.mod h1:+Ywpsq7O8HXn0nuIou7OrIPyXbp3wmkHB+jjWRnGsAI=
 github.com/chzyer/readline v0.0.0-20180603132655-2972be24d48e/go.mod h1:nSuG5e5PlCu98SY8svDHJxuZscDgtXS6KTTbou5AhLI=
 github.com/chzyer/test v0.0.0-20180213035817-a1ea475d72b1/go.mod h1:Q3SI9o4m/ZMnBNeIyt5eFwwo7qiLfzFZmjNmxjkiQlU=
@@ -18,6 +20,8 @@ github.com/gorilla/sessions v1.4.0/go.mod h1:FLWm50oby91+hl7p/wRxDth9bWSuk0qVL2e
 github.com/ianlancetaylor/demangle v0.0.0-20200824232613-28f6c0f3b639/go.mod h1:aSSvb/t6k1mPoxDqO4vJh6VOCGPwU4O0C2/Eqndh1Sc=
 github.com/joho/godotenv v1.5.1 h1:7eLL/+HRGLY0ldzfGMeQkb7vMd0as4CfYvUVzLqw0N0=
 github.com/joho/godotenv v1.5.1/go.mod h1:f4LDr5Voq0i2e/R5DDNOoa2zzDfwtkZa6DnEwAbqwq4=
+github.com/libsql/sqlite-antlr4-parser v0.0.0-20240721121621-c0bdc870f11c h1:WsJ6G+hkDXIMfQE8FIxnnziT26WmsRgZhdWQ0IQGlcc=
+github.com/libsql/sqlite-antlr4-parser v0.0.0-20240721121621-c0bdc870f11c/go.mod h1:gIcFddvsvPcRCO6QDmWH9/zcFd5U26QWWRMgZh4ddyo=
 github.com/lucas11776-golang/http v0.0.0-20250617143637-e1dfc5e56e1f h1:logIs8J8Tzggn+uNYNzQG7w3Wednj6mZXDPg0skOOG8=
 github.com/lucas11776-golang/http v0.0.0-20250617143637-e1dfc5e56e1f/go.mod h1:0bdo5iquWyrcok5hWgIYCW87f7x3qQ+A4FdVDmrB/fs=
 github.com/lucas11776-golang/http v0.0.0-20250618144832-938c732f012f h1:9NNoFAvYGM1RYHwtvbgBZdjv84zU+pIHemWhrpbF9JE=
@@ -30,12 +34,16 @@ github.com/lucas11776-golang/http v0.0.0-20250619123901-4a674b4d8c5b h1:M/MhgwDy
 github.com/lucas11776-golang/http v0.0.0-20250619123901-4a674b4d8c5b/go.mod h1:5jQDgJ854gcEDdmdDscBgC95ObFv69c85UqWdHwua2k=
 github.com/lucas11776-golang/http v0.0.0-20250620174322-5049f5ac7e1d h1:GlGfk1Mk7Bmm3OwAzcDC2ula5kxcjvC9RtvluJVQpIY=
 github.com/lucas11776-golang/http v0.0.0-20250620174322-5049f5ac7e1d/go.mod h1:Q4mqff50dHumlDiapUVXrPz/0jHSEP5vZ+JTObXkoWk=
+github.com/lucas11776-golang/http v0.0.0-20250626095604-f671981a4cdb h1:tWBXyl0kvm8Gs91XPIYPCyhTH2JoVnfzPWyi5pifHTQ=
+github.com/lucas11776-golang/http v0.0.0-20250626095604-f671981a4cdb/go.mod h1:Q4mqff50dHumlDiapUVXrPz/0jHSEP5vZ+JTObXkoWk=
 github.com/lucas11776-golang/orm v0.0.0-20250612111321-4e48b5f692c2 h1:j9Ku4r0D3sZ3PDfR9/VxCXW9gpQCA2HDXf7GFHOgAew=
 github.com/lucas11776-golang/orm v0.0.0-20250612111321-4e48b5f692c2/go.mod h1:2kAretdznjHPSDcdktfjuzukHtjFEuYjksDZIFsA0Ks=
 github.com/lucas11776-golang/orm v0.0.0-20250618095051-98c805f6d19b h1:HOWOshBxQk5663Jn9UUSTYo+TC1OSatrENqmatmejk0=
 github.com/lucas11776-golang/orm v0.0.0-20250618095051-98c805f6d19b/go.mod h1:2kAretdznjHPSDcdktfjuzukHtjFEuYjksDZIFsA0Ks=
 github.com/lucas11776-golang/orm v0.0.0-20250620173136-60982e012ecf h1:ZOzZ/71V7UJOawc+T0HTuxWyalmlXc+sxSlJfTho0l8=
 github.com/lucas11776-golang/orm v0.0.0-20250620173136-60982e012ecf/go.mod h1:2kAretdznjHPSDcdktfjuzukHtjFEuYjksDZIFsA0Ks=
+github.com/lucas11776-golang/orm v0.0.0-20250625092348-ac9c946508b4 h1:eH0hDvQ/a6Txwlpjr+bW+qVhxF6AF/VYTqkNqBd4Mnk=
+github.com/lucas11776-golang/orm v0.0.0-20250625092348-ac9c946508b4/go.mod h1:Rhu2VJvJPit8k5Mzkg8u4T3fFjdjUsX2Jr3VoTs/jrQ=
 github.com/mattn/go-sqlite3 v1.14.24 h1:tpSp2G2KyMnnQu99ngJ47EIkWVmliIizyZBfPrBWDRM=
 github.com/mattn/go-sqlite3 v1.14.24/go.mod h1:Uh1q+B4BYcTPb+yiD3kU8Ct7aC0hY9fxUwlHK0RXw+Y=
 github.com/mattn/go-sqlite3 v1.14.28 h1:ThEiQrnbtumT+QMknw63Befp/ce/nUPgBPMlRFEum7A=
@@ -53,10 +61,14 @@ github.com/quic-go/quic-go v0.50.0 h1:3H/ld1pa3CYhkcc20TPIyG1bNsdhn9qZBGN3b9/UyU
 github.com/quic-go/quic-go v0.50.0/go.mod h1:Vim6OmUvlYdwBhXP9ZVrtGmCMWa3wEqhq3NgYrI8b4E=
 github.com/quic-go/quic-go v0.52.0 h1:/SlHrCRElyaU6MaEPKqKr9z83sBg2v4FLLvWM+Z47pA=
 github.com/quic-go/quic-go v0.52.0/go.mod h1:MFlGGpcpJqRAfmYi6NC2cptDPSxRWTOGNuP4wqrWmzQ=
+github.com/quic-go/quic-go v0.53.0 h1:QHX46sISpG2S03dPeZBgVIZp8dGagIaiu2FiVYvpCZI=
+github.com/quic-go/quic-go v0.53.0/go.mod h1:e68ZEaCdyviluZmy44P6Iey98v/Wfz6HCjQEm+l8zTY=
 github.com/spf13/cast v1.9.2 h1:SsGfm7M8QOFtEzumm7UZrZdLLquNdzFYfIbEXntcFbE=
 github.com/spf13/cast v1.9.2/go.mod h1:jNfB8QC9IA6ZuY2ZjDp0KtFO2LZZlg4S/7bzP6qqeHo=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/testify v1.6.1/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
+github.com/tursodatabase/go-libsql v0.0.0-20250609073118-9c24e0e7fa97 h1:p06qEwD+tRHYHvnw971fsbDtoxTnw6Tp0FYD1q2TSXs=
+github.com/tursodatabase/go-libsql v0.0.0-20250609073118-9c24e0e7fa97/go.mod h1:TjsB2miB8RW2Sse8sdxzVTdeGlx74GloD5zJYUC38d8=
 go.uber.org/automaxprocs v1.6.0 h1:O3y2/QNTOdbF+e/dpXNNW7Rx2hZ4sTIPyybbxyNqTUs=
 go.uber.org/automaxprocs v1.6.0/go.mod h1:ifeIMSnPZuznNm6jmdzmU3/bfk01Fe2fotchwEFJ8r8=
 go.uber.org/mock v0.5.0 h1:KAMbZvZPyBPWgD14IrIQ38QCyjwpvVVV6K/bHl1IwQU=
@@ -71,6 +83,8 @@ golang.org/x/exp v0.0.0-20240506185415-9bf2ced13842 h1:vr/HnozRka3pE4EsMEg1lgkXJ
 golang.org/x/exp v0.0.0-20240506185415-9bf2ced13842/go.mod h1:XtvwrStGgqGPLc4cjQfWqZHG1YFdYs6swckp8vpsjnc=
 golang.org/x/exp v0.0.0-20250606033433-dcc06ee1d476 h1:bsqhLWFR6G6xiQcb+JoGqdKdRU6WzPWmK8E0jxTjzo4=
 golang.org/x/exp v0.0.0-20250606033433-dcc06ee1d476/go.mod h1:3//PLf8L/X+8b4vuAfHzxeRUl04Adcb341+IGKfnqS8=
+golang.org/x/exp v0.0.0-20250620022241-b7579e27df2b h1:M2rDM6z3Fhozi9O7NWsxAkg/yqS/lQJ6PmkyIV3YP+o=
+golang.org/x/exp v0.0.0-20250620022241-b7579e27df2b/go.mod h1:3//PLf8L/X+8b4vuAfHzxeRUl04Adcb341+IGKfnqS8=
 golang.org/x/mod v0.23.0 h1:Zb7khfcRGKk+kqfxFaP5tZqCnDZMjC5VtUBs87Hr6QM=
 golang.org/x/mod v0.23.0/go.mod h1:6SkKJ3Xj0I0BrPOZoBy3bdMptDDU9oJrpohJ3eWZ1fY=
 golang.org/x/mod v0.25.0 h1:n7a+ZbQKQA/Ysbyb0/6IbB1H/X41mKgbhfv7AfG/44w=
