@@ -7,6 +7,10 @@ import (
 )
 
 // Comment
-func Setup() {
-	orm.DB.Add("sqlite", sqlite.Connect("file:"+env.Env("DATABASE"))) // SQLite database config...
+func Setup() orm.Database {
+	db := sqlite.Connect("file:" + env.Env("DATABASE"))
+
+	orm.DB.Add("sqlite", db) // SQLite database config...
+
+	return db
 }
