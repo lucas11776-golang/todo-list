@@ -1,7 +1,9 @@
 package bootstrap
 
 import (
+	"fmt"
 	"server/database"
+	"server/database/migration"
 	"server/routes"
 
 	"github.com/lucas11776-golang/http"
@@ -14,7 +16,9 @@ func LoadEnv(envPath string) {
 
 // Comment
 func Boot(envPath string) *http.HTTP {
-	LoadEnv(envPath)
+	if envPath != "" {
+		LoadEnv(envPath)
+	}
 
 	server := http.Server(env.Env("HOST"), env.EnvInt("PORT"))
 
@@ -23,6 +27,20 @@ func Boot(envPath string) *http.HTTP {
 	ConfigureRoutes(server)
 
 	return server
+}
+
+// Comment
+func Server(envPath string) {
+	server := Boot(envPath)
+
+	fmt.Printf("\r\nRunning Server %s:%d\r\n", env.Env("HOST"), env.EnvInt("PORT"))
+
+	server.Listen()
+}
+
+// Comment
+func Migration(envPath string) {
+	migration.Migrate(envPath)
 }
 
 // Comment

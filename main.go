@@ -1,16 +1,23 @@
 package main
 
 import (
-	"fmt"
+	"os"
 	"server/bootstrap"
+	"strings"
+)
 
-	"github.com/lucas11776-golang/http/utils/env"
+const (
+	Env = ".env"
 )
 
 func main() {
-	server := bootstrap.Boot(".env")
+	if len(os.Args) >= 2 {
+		switch strings.ToUpper(os.Args[1]) {
+		case "SERVER":
+			bootstrap.Server(Env)
 
-	fmt.Printf("\r\nRunning Server %s:%d\r\n", env.Env("HOST"), env.EnvInt("PORT"))
-
-	server.Listen()
+		case "MIGRATION":
+			bootstrap.Migration(Env)
+		}
+	}
 }

@@ -3,8 +3,8 @@ module server
 go 1.24.2
 
 require (
-	github.com/lucas11776-golang/http v0.0.0-20250626095604-f671981a4cdb
-	github.com/lucas11776-golang/orm v0.0.0-20250625092348-ac9c946508b4
+	github.com/lucas11776-golang/http v0.0.0-20250709124727-d3355eba6958
+	github.com/lucas11776-golang/orm v0.0.0-20250709085441-9f4186b20291
 	github.com/spf13/cast v1.9.2
 	golang.org/x/crypto v0.39.0
 )
@@ -13,7 +13,7 @@ require (
 	github.com/antlr4-go/antlr/v4 v4.13.1 // indirect
 	github.com/go-task/slim-sprig v0.0.0-20230315185526-52ccab3ef572 // indirect
 	github.com/go-task/slim-sprig/v3 v3.0.0 // indirect
-	github.com/google/pprof v0.0.0-20250607225305-033d6d78b36a // indirect
+	github.com/google/pprof v0.0.0-20250630185457-6e76a2b096b5 // indirect
 	github.com/gorilla/securecookie v1.1.2 // indirect
 	github.com/gorilla/sessions v1.4.0 // indirect
 	github.com/joho/godotenv v1.5.1 // indirect

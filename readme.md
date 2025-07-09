@@ -11,10 +11,10 @@ HTTP requests [Go](https://go.dev) version [1.23](https://go.dev/doc/devel/relea
 First you need to setup database using the command below
 
 ```sh
-go run database/migration/migration.go
+go run main.go server migration
 ```
 
-After you can run `go run main.go` to start the application
+After you can run `go run main.go server` to start the application
 
 ```sh
 go run main.go

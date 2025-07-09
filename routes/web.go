@@ -4,6 +4,8 @@ import (
 	"server/app/controllers/web/home"
 	"server/app/controllers/web/login"
 	"server/app/controllers/web/logout"
+	"server/app/controllers/web/profile/details"
+	"server/app/controllers/web/profile/password"
 	"server/app/controllers/web/register"
 	"server/app/controllers/web/todos"
 	"server/app/controllers/web/todos/complete"
@@ -40,5 +42,15 @@ func web(route *http.Router) {
 			})
 		}, tasks.UserTask)
 	}, authentication.IsAuth)
+	route.Group("profile", func(route *http.Router) {
+		route.Group("details", func(route *http.Router) {
+			route.Get("/", details.Edit)
+			route.Patch("/", details.Update)
+		})
+		route.Group("password", func(route *http.Router) {
+			route.Get("/", details.Edit)
+			route.Get("/", password.Update)
+		})
+	})
 	route.Delete("logout", logout.Destroy)
 }

@@ -1,4 +1,4 @@
-package main
+package migration
 
 import (
 	"fmt"
@@ -11,12 +11,14 @@ import (
 	"github.com/lucas11776-golang/orm"
 )
 
-func main() {
-	env.Load(".env")
+func Migrate(envPath string) {
+	if envPath != "" {
+		env.Load(".env")
+	}
 
 	migration := database.Setup().Migration()
 
-	for _, model := range tables() {
+	for _, model := range Tables() {
 		_type := reflect.ValueOf(model)
 
 		if err := migration.Migrate(orm.Models{model}); err != nil {
@@ -30,10 +32,9 @@ func main() {
 }
 
 // Comment
-func tables() orm.Models {
+func Tables() orm.Models {
 	return orm.Models{
 		models.User{},
 		models.Task{},
 	}
-
 }
