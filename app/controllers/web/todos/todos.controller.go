@@ -30,6 +30,8 @@ func Store(req *http.Request, res *http.Response) *http.Response {
 		req.Validator.Values(),
 	)
 
+	fmt.Println("ERROR", err)
+
 	if err != nil {
 		return res.Back().WithError("task_create_error", err.Error())
 	}

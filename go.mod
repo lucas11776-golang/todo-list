@@ -3,10 +3,10 @@ module server
 go 1.24.2
 
 require (
-	github.com/lucas11776-golang/http v0.0.0-20250709124727-d3355eba6958
-	github.com/lucas11776-golang/orm v0.0.0-20250709085441-9f4186b20291
+	github.com/lucas11776-golang/http v0.0.0-20250801153405-3de9087d4b52
+	github.com/lucas11776-golang/orm v0.0.0-20250805131230-125ca946f2fa
 	github.com/spf13/cast v1.9.2
-	golang.org/x/crypto v0.39.0
+	golang.org/x/crypto v0.40.0
 )
 
 require (
@@ -18,19 +18,19 @@ require (
 	github.com/gorilla/sessions v1.4.0 // indirect
 	github.com/joho/godotenv v1.5.1 // indirect
 	github.com/libsql/sqlite-antlr4-parser v0.0.0-20240721121621-c0bdc870f11c // indirect
-	github.com/mattn/go-sqlite3 v1.14.28 // indirect
+	github.com/mattn/go-sqlite3 v1.14.30 // indirect
 	github.com/onsi/ginkgo/v2 v2.23.4 // indirect
 	github.com/open2b/scriggo v0.60.0 // indirect
 	github.com/quic-go/qpack v0.5.1 // indirect
-	github.com/quic-go/quic-go v0.53.0 // indirect
+	github.com/quic-go/quic-go v0.54.0 // indirect
 	github.com/tursodatabase/go-libsql v0.0.0-20250609073118-9c24e0e7fa97 // indirect
 	go.uber.org/automaxprocs v1.6.0 // indirect
 	go.uber.org/mock v0.5.2 // indirect
 	golang.org/x/exp v0.0.0-20250620022241-b7579e27df2b // indirect
-	golang.org/x/mod v0.25.0 // indirect
-	golang.org/x/net v0.41.0 // indirect
-	golang.org/x/sync v0.15.0 // indirect
-	golang.org/x/sys v0.33.0 // indirect
-	golang.org/x/text v0.26.0 // indirect
-	golang.org/x/tools v0.34.0 // indirect
+	golang.org/x/mod v0.26.0 // indirect
+	golang.org/x/net v0.42.0 // indirect
+	golang.org/x/sync v0.16.0 // indirect
+	golang.org/x/sys v0.34.0 // indirect
+	golang.org/x/text v0.27.0 // indirect
+	golang.org/x/tools v0.35.0 // indirect
 )

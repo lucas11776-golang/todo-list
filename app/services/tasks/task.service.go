@@ -13,6 +13,7 @@ func CreateTask(userID int64, form map[string]string) (*models.Task, error) {
 			"user_id":     userID,
 			"title":       form["title"],
 			"description": form["description"],
+			"complete":    false,
 		})
 }
 

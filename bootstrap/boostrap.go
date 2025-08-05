@@ -3,7 +3,6 @@ package bootstrap
 import (
 	"fmt"
 	"server/database"
-	"server/database/migration"
 	"server/routes"
 
 	"github.com/lucas11776-golang/http"
@@ -40,7 +39,7 @@ func Server(envPath string) {
 
 // Comment
 func Migration(envPath string) {
-	migration.Migrate(envPath)
+	database.Migrate(envPath)
 }
 
 // Comment
